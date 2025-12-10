@@ -1,7 +1,9 @@
 const express = require("express");
 const cors = require(cors);
-let port = 21000; // we can specify our own port in node js
+const database = require("./db-connect/db");
+let port = 21000; 
 const app = express();
+database.connect();
 app.use(
   cors({
     origin: "*",
