@@ -2,6 +2,12 @@ const express = require("express");
 const cors = require(cors);
 let port = 21000; // we can specify our own port in node js
 const app = express();
+app.use(
+  cors({
+    origin: "*",
+    credientials: true,
+  })
+);
 app.get("/details",(req,res) => {
     return{
     success : true,
